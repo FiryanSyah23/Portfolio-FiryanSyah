@@ -1,7 +1,7 @@
 const animation = document.querySelectorAll(".animation");
 
 export function iconCodeAnimation() {
-	const icons = document.querySelectorAll(".card-master-code-icon img");
+	const icons = document.querySelectorAll(".icon-skill");
 	const icons2 = document.querySelectorAll(".experience-content img");
 	const icons3 = document.querySelectorAll(".icon");
 	const card = document.querySelectorAll(".card-project");
