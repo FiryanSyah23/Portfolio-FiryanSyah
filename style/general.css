@@ -1,0 +1,252 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+	outline: none;
+}
+input {
+	line-height: normal;
+}
+label,
+button {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+section {
+	scroll-margin-top: 100px;
+}
+
+.mastered-code {
+	scroll-margin-top: 250px;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+a,
+h1,
+p {
+	color: black;
+}
+
+.container {
+	width: 100%;
+	max-width: 124rem;
+	position: relative;
+	top: 82px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 970px) {
+	/* ----------------------------------- */
+	/* 			    navbar				   */
+	/* ----------------------------------- */
+	.nav-page .nav-menu,
+	.nav-page .nav-name,
+	.navbar .nav-page {
+		padding: 0;
+		margin: 0;
+	}
+	.homepage .flex-homepage,
+	.aboutme .grid-aboutme {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: center;
+	}
+
+	.navbar .nav-page {
+		width: 60%;
+	}
+
+	.nav-menu ul {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		right: -420px;
+		top: 80px;
+		background-color: rgb(0, 12, 51);
+		width: 14em;
+		height: 100vh;
+		transition: right 0.5s ease;
+	}
+
+	.side-bar ul {
+		right: 0;
+	}
+
+	.nav-page .nav-icon-menu {
+		display: inline;
+		position: absolute;
+		right: 6%;
+		transform: rotate(90deg);
+		word-spacing: -8px;
+		font-size: 30px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.nav-menu .group a {
+		display: block;
+		padding: 20px;
+		margin: 0 auto;
+		text-decoration: none;
+		text-align: center;
+
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
+
+	.nav-name {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.8em;
+		text-align: center;
+	}
+	/* ----------------------------------- */
+	/* 			    HOME 				   */
+	/* ----------------------------------- */
+	.homepage .flex-homepage {
+		grid-template-columns: 1fr;
+	}
+
+	.flex-homepage .introduce {
+		align-items: center;
+		text-align: center;
+	}
+
+	.introduce .button-active {
+		flex-direction: column;
+	}
+	.flex-homepage .picture {
+		height: 100%;
+	}
+
+	/* ----------------------------------- */
+	/* 			    About me			   */
+	/* ----------------------------------- */
+
+	.aboutme .grid-aboutme {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"title"
+			"place1"
+			"place2"
+			"place3"
+			"place4"
+			"place5";
+	}
+
+	.place3 .sosmed-link {
+		justify-content: center;
+	}
+	/* ----------------------------------- */
+	/*		    Code I’ve Mastered		   */
+	/* ----------------------------------- */
+	.mastered-code .grid-mastered-code {
+		grid-template-columns: 1fr;
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+	.container .waveCodeTop {
+		top: 15px;
+	}
+
+	.container .waveCodeBottom {
+		bottom: 1px;
+	}
+	/* ----------------------------------- */
+	/*				PROJECT				   */
+	/* ----------------------------------- */
+	.Project .grid-Project {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+
+	.container-card-project .card-project {
+		width: 325px;
+	}
+}
+
+@media (max-width: 426px) {
+	.nav-page .nav-menu ul {
+		width: 10em;
+	}
+	.nav-menu .group a {
+		padding: 10px;
+	}
+	/* ----------------------------------- */
+	/* 			    HOME PAGE			   */
+	/* ----------------------------------- */
+	.homepage .flex-homepage {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.introduce .button-active {
+		margin: 20px 0;
+		gap: 15px;
+
+	}
+
+	.introduce .button-active a {
+		padding: 5px 10px;
+	}
+
+	.container-card-project .card-project {
+        width: 100%;
+    }
+
+	.flex-homepage .introduce h1 {
+		font-size: 7vh;
+	}
+
+	.introduce .p1,
+	.introduce .p2 {
+		font-size: 2.2vh;
+	}
+}
+
+/* Ultra Wide: 1921px – 2560px */
+@media (min-width: 1921px) and (max-width: 2560px) {
+}
