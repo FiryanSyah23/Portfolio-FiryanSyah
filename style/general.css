@@ -5,35 +5,39 @@ html {
 	width: 100%;
 }
 
-* {
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
+
 input,
 textarea,
 select,
 button {
 	outline: none;
 }
+
 input {
 	line-height: normal;
 }
+
 label,
 button {
 	cursor: pointer;
 }
+
 a {
 	text-decoration: none;
 }
+
 img {
 	display: block;
 	max-width: 100%;
 }
+
 section {
 	scroll-margin-top: 100px;
 }
@@ -65,28 +69,24 @@ p {
 
 .container {
 	width: 100%;
-	max-width: 124rem;
 	position: relative;
 	top: 82px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow-x: hidden;
 }
 
+/* =========================================
+   MEDIA QUERY: max-width 970px
+   ========================================= */
 @media (max-width: 970px) {
-	/* ----------------------------------- */
-	/* 			    navbar				   */
-	/* ----------------------------------- */
+	/* Navbar */
 	.nav-page .nav-menu,
 	.nav-page .nav-name,
 	.navbar .nav-page {
 		padding: 0;
 		margin: 0;
-	}
-	.homepage .flex-homepage,
-	.aboutme .grid-aboutme {
-		margin: 0 1em;
-		padding: 2em 1em;
 	}
 
 	.navbar {
@@ -98,15 +98,26 @@ p {
 		width: 60%;
 	}
 
+	.nav-page .nav-icon-menu {
+		display: inline;
+		position: absolute;
+		right: 6%;
+		font-size: 30px;
+		font-weight: bold;
+		cursor: pointer;
+		transform: rotate(90deg);
+		word-spacing: -8px;
+	}
+
 	.nav-menu ul {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
 		right: -420px;
 		top: 80px;
-		background-color: rgb(0, 12, 51);
 		width: 14em;
 		height: 100vh;
+		background-color: rgb(0, 12, 51);
 		transition: right 0.5s ease;
 	}
 
@@ -114,24 +125,12 @@ p {
 		right: 0;
 	}
 
-	.nav-page .nav-icon-menu {
-		display: inline;
-		position: absolute;
-		right: 6%;
-		transform: rotate(90deg);
-		word-spacing: -8px;
-		font-size: 30px;
-		font-weight: bold;
-		cursor: pointer;
-	}
-
 	.nav-menu .group a {
 		display: block;
 		padding: 20px;
 		margin: 0 auto;
-		text-decoration: none;
 		text-align: center;
-
+		text-decoration: none;
 		border-bottom: 1px solid rgb(255, 255, 255);
 	}
 
@@ -143,9 +142,14 @@ p {
 		font-size: 0.8em;
 		text-align: center;
 	}
-	/* ----------------------------------- */
-	/* 			    HOME 				   */
-	/* ----------------------------------- */
+
+	/* Homepage */
+	.homepage .flex-homepage,
+	.aboutme .grid-aboutme {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+
 	.homepage .flex-homepage {
 		grid-template-columns: 1fr;
 	}
@@ -155,14 +159,12 @@ p {
 		text-align: center;
 	}
 
-	.introduce .button-active {
-		flex-direction: column;
+	.introduce .button-active a {
+		padding: 5px 10px;
+		font-size: 16px;
 	}
 
-	/* ----------------------------------- */
-	/* 			    About me			   */
-	/* ----------------------------------- */
-
+	/* About Me */
 	.aboutme .grid-aboutme {
 		grid-template-columns: 1fr;
 		grid-template-areas:
@@ -177,14 +179,14 @@ p {
 	.place3 .sosmed-link {
 		justify-content: center;
 	}
-	/* ----------------------------------- */
-	/*		    Code I’ve Mastered		   */
-	/* ----------------------------------- */
+
+	/* Code I've Mastered */
 	.mastered-code .grid-mastered-code {
 		grid-template-columns: 1fr;
 		margin: 0 1em;
 		padding: 2em 1em;
 	}
+
 	.container .waveCodeTop {
 		top: 15px;
 	}
@@ -192,9 +194,8 @@ p {
 	.container .waveCodeBottom {
 		bottom: 1px;
 	}
-	/* ----------------------------------- */
-	/*				PROJECT				   */
-	/* ----------------------------------- */
+
+	/* Project */
 	.Project .grid-Project {
 		margin: 0 1em;
 		padding: 2em 1em;
@@ -203,9 +204,35 @@ p {
 	.container-card-project .card-project {
 		width: 325px;
 	}
+
+	/* Experience */
+	.experience .grid-experience {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+
+	.grid-experience .experience-content img {
+		width: 150px;
+	}
+
+	/* Contact */
+	.contact .grid-contact {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
+
+	/* Footer */
+	.footer .flex-footer {
+		margin: 0 1em;
+		padding: 2em 1em;
+	}
 }
 
+/* =========================================
+   MEDIA QUERY: max-width 426px
+   ========================================= */
 @media (max-width: 426px) {
+	/* Typography */
 	.introduce h2,
 	.grid-aboutme .title-aboutme,
 	.resume-mastered-code h2,
@@ -215,50 +242,88 @@ p {
 		font-size: 1.4em;
 	}
 
+	/* Navbar */
 	.nav-page .nav-menu ul {
 		width: 10em;
 	}
+
 	.nav-menu .group a {
 		padding: 10px;
 	}
-	/* ----------------------------------- */
-	/* 			    HOME PAGE			   */
-	/* ----------------------------------- */
+
+	/* Homepage */
 	.homepage .flex-homepage {
 		display: grid;
 		grid-template-columns: 1fr;
 	}
 
-	.introduce .button-active {
-		margin: 20px 0;
-		gap: 15px;
-	}
-
-	.introduce .button-active a {
-		padding: 5px 10px;
-	}
-
-	.flex-homepage .introduce h1 {
+	.homepage h1 {
 		font-size: 7vh;
 	}
 
-	.introduce .p1,
-	.introduce .p2 {
-		font-size: 2.2vh;
+	.homepage h2 {
+		font-size: 20px;
 	}
-	/* ----------------------------------- */
-	/* 			    PROJECT 			   */
-	/* ----------------------------------- */
 
+	.homepage p {
+		font-size: 14px;
+	}
+
+	.flex-homepage .picture {
+		width: 75vw;
+	}
+
+	.introduce .button-active {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	/* About Me */
+	.card h3 {
+		font-size: 3.2vh;
+	}
+
+	.card p {
+		font-size: 2vh;
+	}
+
+	/* Skills */
+	.resume-mastered-code {
+		padding: 0;
+	}
+
+	.resume-mastered-code p {
+		font-size: 3vh;
+	}
+
+	.card-master-code-icon {
+		padding: 0;
+	}
+
+	.icon-skill img {
+		width: 50px;
+	}
+
+	/* Project */
 	.container-card-project .card-project {
 		width: 100%;
 	}
 
-	/* ----------------------------------- */
-	/* 			    ABOUT ME			   */
-	/* ----------------------------------- */
+	/* Fix full width semua section */
+	.homepage .flex-homepage,
+	.aboutme .grid-aboutme,
+	.mastered-code .grid-mastered-code,
+	.Project .grid-Project,
+	.experience .grid-experience,
+	.contact .grid-contact,
+	.footer .flex-footer {
+		margin: 0 1em;
+		padding: 2em 0.8em;
+	}
 }
 
-/* Ultra Wide: 1921px – 2560px */
+/* =========================================
+   MEDIA QUERY: Ultra Wide 1921px – 2560px
+   ========================================= */
 @media (min-width: 1921px) and (max-width: 2560px) {
 }

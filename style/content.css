@@ -121,7 +121,7 @@
 }
 
 .button-active {
-	margin-top: 30px;
+	margin: 20px 0;
 	display: flex;
 	align-items: center;
 	gap: 30px;
@@ -262,6 +262,9 @@
 	transition: all 0.5s ease;
 	position: relative;
 	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .icon-skill::after {
@@ -456,9 +459,8 @@
 }
 .grid-contact {
 	display: grid;
-	height: 100%;
 	place-items: center;
-	grid-template-rows: repeat(2, 0.1fr);
+	grid-template-rows: repeat(2, 1fr);
 	gap: 20px;
 }
 
@@ -470,7 +472,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 60px;
+	gap: 50px;
 	flex-wrap: wrap;
 }
 .contact-link .icon {
