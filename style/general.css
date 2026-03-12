@@ -309,6 +309,10 @@ p {
 		width: 100%;
 	}
 
+	.grid-Project .container-card-project {
+		justify-content: start;
+		align-items: start;
+	}
 	/* Fix full width semua section */
 	.homepage .flex-homepage,
 	.aboutme .grid-aboutme,
