@@ -306,7 +306,7 @@
 
 .grid-Project {
 	display: grid;
-	grid-template-rows: 0.2fr 1fr;
+	grid-template-rows: 0.1fr 1fr;
 	gap: 20px;
 }
 
